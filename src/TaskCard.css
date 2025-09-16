@@ -1,0 +1,27 @@
+/* TaskCard.css */
+
+.task-card {
+    padding: 5px;
+    margin-bottom: 8px;
+    background-color: white;
+    cursor: grab;
+    border-radius: 5px;
+}
+
+.task-wrapper {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.task-wrapper.color-type-a {
+    background-color: #ffc3c1;
+}
+
+.task-wrapper.color-type-b {
+    background-color: #fff3cc;
+}
+
+.task-wrapper.color-type-c {
+    background-color: #D4EDDA;
+}
+
