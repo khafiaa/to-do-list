@@ -1,0 +1,27 @@
+.column-container {
+    flex-shrink: 0; /* Prevents columns from shrinking to fit the container */
+    width: 300px; /* Optional: Give each column a fixed width */
+    min-width: 280px; /* Good for responsiveness */
+    max-width: 350px; /* Good for responsiveness */
+
+    background-color: #f0f0f0; /* Example styling */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Make column content (title, task-list) stack vertically */
+    flex-direction: column;
+}
+
+.column-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.task-list {
+    /* Ensure task-list can grow to fill available space in the column */
+    flex-grow: 1;
+    min-height: 50px; /* Example: ensure task list has some height even if empty */
+    padding-bottom: 10px; /* Space for scrollbar or drag handles */
+}

@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.columns-wrapper {
+    display: flex; /* Makes the children (Column components) arrange in a row */
+    gap: 20px; /* Adds space between the columns */
+    overflow-x: auto; /* Allows horizontal scrolling if columns exceed screen width */
+    padding: 10px; /* Optional: Adds some padding around the columns */
+    height: 100%; /* Optional: Make wrapper take full height if needed */
+    align-items: flex-start; /* Aligns columns to the top if they have different heights */
+}
+
+.class, .idk {
+    height: 100vh; /* Example: make them take full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack content vertically if there's other content */
+}
