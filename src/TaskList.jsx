@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Column } from './Column'; // Assuming './Column' exports the Column component
 import { DndContext } from '@dnd-kit/core';
 import './TaskList.css'
+import AddTask from "./AddTask.jsx";
 
 const COLUMNS = [
     { id: 'TODO', title: 'To Do' },
@@ -62,6 +63,7 @@ export default function TaskList() {
     return (
         <div className="class">
             <div className="idk">
+                <AddTask/>
                 <DndContext onDragEnd={handleDragEnd}>
                     <div className="columns-wrapper">
                         {COLUMNS.map((column) => {

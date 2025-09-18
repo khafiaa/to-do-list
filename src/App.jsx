@@ -6,10 +6,7 @@ function App() {
 
   return (
     <>
-      <div>
-          <TaskList/>
-          <AddTask/>
-      </div>
+        <TaskList/>
     </>
   )
 }

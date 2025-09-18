@@ -1,0 +1,8 @@
+body {
+    background-image: url('/Users/kakhtar3/Library/CloudStorage/OneDrive-azureford/Documents/React Practice/to-do-list/src/assets/background.jpg'); /* Or '/background.jpg' if in public folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+}
