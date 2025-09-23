@@ -21,7 +21,6 @@ export function TaskCard({ task }) {
         wrapperColorClass = 'color-type-c'
     }
 
-    // Combine with existing class names
     const wrapperClassName = `task-wrapper ${wrapperColorClass}`;
 
     return (

@@ -10,35 +10,14 @@ const COLUMNS = [
     { id: 'DONE', title: 'Done' },
 ];
 
-const INITIAL_TASKS = [
-    {
-        id: '1',
-        title: 'Research Project',
-        description: 'Gather requirements and create initial documentation',
-        status: 'TODO',
-    },
-    {
-        id: '2',
-        title: 'Design System',
-        description: 'Create component library and design tokens',
-        status: 'TODO',
-    },
-    {
-        id: '3',
-        title: 'API Integration',
-        description: 'Implement REST API endpoints',
-        status: 'IN_PROGRESS',
-    },
-    {
-        id: '4',
-        title: 'Testing',
-        description: 'Write unit tests for core functionality',
-        status: 'DONE',
-    },
-];
+const TASKS = [];
 
 export default function TaskList() {
-    const [tasks, setTasks] = useState(INITIAL_TASKS);
+    const [tasks, setTasks] = useState(TASKS);
+
+    const handleAddTask = (newTask) => {
+        setTasks((prevTasks) => [...prevTasks, newTask]);
+    };
 
     function handleDragEnd(event) {
         const { active, over } = event;
@@ -63,7 +42,7 @@ export default function TaskList() {
     return (
         <div className="class">
             <div className="idk">
-                <AddTask/>
+                <AddTask onAddTask={handleAddTask} />
                 <DndContext onDragEnd={handleDragEnd}>
                     <div className="columns-wrapper">
                         {COLUMNS.map((column) => {
